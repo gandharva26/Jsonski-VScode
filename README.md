@@ -21,15 +21,61 @@ https://user-images.githubusercontent.com/55717003/219509188-986f8260-4bd6-4aa3-
 
 5. Find your results in results.json
 
+## Queries supported by JSONSki
+
+### JSONPath
+JSONPath is the basic query language of JSON data. It refers to substructures of JSON data in a similar way as XPath queries are used for XML data. For the details of JSONPath syntax, please refer to [Stefan Goessner's article](https://goessner.net/articles/JsonPath/index.html#e2). 
+
+#### Supported Operators (to be updated)
+| Operator                  |   Description     |
+| :-----------------------: |:-----------------:|
+| `$`                       | root object              |
+| `.`                       | child object      |
+| `[]`                       | child array      |
+| `*`                       | wildcard, all objects or array members          |
+| `[index]`             | array index      |
+| `[start:end]`             | array slice operator      |
+
+
+#### Path Examples
+Consider a piece of geo-referenced tweet in JSON
+```javascript
+{
+    "coordinates": [
+        40.74118764, -73.9998279
+    ],
+    "user": {
+        "id": 6253282
+    },
+    "place": {
+        "name": "Manhattan",
+        "bounding_box": {
+            "type": "Ploygon",
+            "pos": [
+                [-74.026675, 40.683935],
+                ......
+            ]
+        }
+    }
+}
+```
+| JsonPath | Result |
+| :------- | :----- |
+| `$.coordinates[*]` | all coordinates     |
+| `$.place.name` | place name   |
+| `$.place.bounding_box.pos[0]`| first position of the bounding box in place                      |
+| `$.place.bounding_box.pos[0:2]`| first two positions of the bounding box in place                      |
 
 ## Requirements
 
 ## Hardware requirements
-```
-CPUs: 64-bit ALU instructions, 256-bit SIMD instruction set, and the carry-less multiplication instruction (pclmulqdq)
-Operating System: Linux, MacOs (Intel Chips only) 
-C++ Compiler: g++ (7.4.0 or higher)
-```
+
+**CPUs:** 64-bit ALU instructions, 256-bit SIMD instruction set, and the carry-less multiplication instruction (pclmulqdq)
+
+**Operating System:** Linux, MacOs (Intel Chips only) 
+
+**C++ Compiler:** g++ (7.4.0 or higher)
+
 
 
 ## Software requirements
