@@ -16,14 +16,10 @@ async function CreateBoilerPlate(){
 	const htmlContent = `const JSki = require('jsonski');
 	const fs = require('fs');
 	console.time();
-	console.log('JsonSki Runtime', JSki.JSONSkiParser("$[*].entities.urls[*].url", "dataset/twitter_sample_large_record.json"));
+	console.log('JsonSki', JSki.JSONSkiParser("$[*].entities.urls[*].url", "dataset/twitter_sample_large_record.json"));
+	//console.log('JsonSki', JSki.JSONSkiParser("JSONSki Query", "JSON File Path"));
 	console.timeEnd();
-	file_contents = fs.readFileSync('dataset/twitter_sample_large_record.json')
-	str = file_contents.toString()
-	console.log("Javascript Runtime")
-	console.time();
-	var json = JSON.parse(str);
-	console.timeEnd();`;
+	;`;
 	
 	if (!vscode.workspace) {
 		return vscode.window.showErrorMessage('Please open a project folder first');
