@@ -1,19 +1,16 @@
 
 
-# JsonSki VS Code Extension README
+# JsonSki VSCode Extension 
 
+JSONSki is **a streaming JSONPath processor** with **fast-forward** functionality. During the streaming, it can automatically fast-forward over certain JSON substructures that are irrelavent to the query evaluation, without parsing them in detail. To make the fast-forward efficient, JSONSki features a highly bit-parallel solution that intensively utilizes bitwise and SIMD operations that are prevelent on modern CPUs to implement the fast-forward APIs. 
 
 ## How to use
 
-
-
 https://user-images.githubusercontent.com/55717003/219509188-986f8260-4bd6-4aa3-b419-0f3b0b38ea0e.mp4
-
-
 
 1. Open a JSON file in the active Editor and Type JSONSKI.
 
-2. Open the input box (CMD + SHIFT + P) on your VSCode editor.
+2. Open the Input box (CMD + SHIFT + P) on your VSCode editor.
 
 3. Choose between creating a boiler Plate and Querying JSON.
 
@@ -68,25 +65,25 @@ Consider a piece of geo-referenced tweet in JSON
 
 ## Requirements
 
-## Hardware requirements
+### Hardware requirements
 
-**CPUs:** 64-bit ALU instructions, 256-bit SIMD instruction set, and the carry-less multiplication instruction (pclmulqdq)
+- CPUs: 64-bit ALU instructions, 256-bit SIMD instruction set, and the carry-less multiplication instruction (pclmulqdq)
 
-**Operating System:** Linux, MacOs (Intel Chips only) 
+- Operating System: Linux, MacOs (Intel Chips only) 
 
-**C++ Compiler:** g++ (7.4.0 or higher)
+- C++ Compiler: g++ (7.4.0 or higher)
 
 
 
-## Software requirements
+### Software requirements
 
-Before starting to use Node-API you need to assure you have the following prerequisites:
+Before using the JSONSki VSCode Extension you need to assure you have the following prerequisites:
 
-**Node.JS (v14 and above)** see: [Installing Node.js](https://nodejs.org/)
+- Node.JS (v14 or higher) see: [Installing Node.js](https://nodejs.org/)
 
-**Python (v3.7 and above)** see: [Installing Python](https://www.python.org/downloads/release/python-3100/)
+- Python (v3.7 or higher) see: [Installing Python](https://www.python.org/downloads/release/python-3100/)
 
-**C++ : g++ (7.4.0 or higher)** see: [Installing C++](https://gcc.gnu.org/install/)
+- C++ : g++ (v7.4.0 or higher) see: [Installing C++](https://gcc.gnu.org/install/)
 
 
 
