@@ -5,7 +5,7 @@
 
 ## How to use
 
-1. Open a JSON file in the active Editor.
+1. Open a JSON file in the active Editor and Type JSONSKI.
 
 2. Open the input box (CMD + SHIFT + P) on your VSCode editor.
 
