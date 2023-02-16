@@ -2,7 +2,7 @@
   "name": "Jsonski",
   "displayName": "Jsonski",
   "description": "",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "publisher": "Gandharva",
   "engines": {
     "vscode": "^1.75.0"
