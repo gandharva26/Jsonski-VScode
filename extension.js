@@ -42,6 +42,10 @@ async function CreateBoilerPlate(){
 			}
 			vscode.window.showInformationMessage('Created boilerplate files');
 			});
+			const openPath = vscode.Uri.file(path.join(folderPath, 'index.js'));
+			vscode.workspace.openTextDocument(openPath).then(doc => {
+				vscode.window.showTextDocument(doc);
+			});
 }
 
 
@@ -66,7 +70,10 @@ async function CreateBoilerPlate(){
 		}
 		 vscode.window.showInformationMessage('Result written to file');
 	  });
-
+	  const openPath = await vscode.Uri.file(path.join(vscode.workspace.workspaceFolders[0].uri.toString().split(':')[1], 'result.json'));
+			vscode.workspace.openTextDocument(openPath).then(doc => {
+				vscode.window.showTextDocument(doc);
+			});
 	await vscode.window.showInformationMessage("Query result here",temp_result);
 
 }
