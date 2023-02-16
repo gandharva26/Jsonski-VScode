@@ -1,7 +1,8 @@
 {
   "name": "Jsonski",
   "displayName": "Jsonski",
-  "description": "",
+  "description": "Extract and Query JSON Data faster using JSONPath Queries through streaming using JSONSki",
+  "license": "MIT",
   "version": "0.5.0",
   "publisher": "Gandharva",
   "engines": {
