@@ -5,6 +5,12 @@
 
 ## How to use
 
+
+
+https://user-images.githubusercontent.com/55717003/219509188-986f8260-4bd6-4aa3-b419-0f3b0b38ea0e.mp4
+
+
+
 1. Open a JSON file in the active Editor and Type JSONSKI.
 
 2. Open the input box (CMD + SHIFT + P) on your VSCode editor.
